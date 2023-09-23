@@ -1,10 +1,10 @@
 public class Guest {
     private String name;
     private String meal;
-    private int phoneNumber;
+    private Double phoneNumber;
     private boolean isVegan;
 
-    public Guest(String name, String meal, int phoneNumber, boolean isVegan) {
+    public Guest(String name, String meal, Double phoneNumber, boolean isVegan) {
         this.name = name;
         this.meal = meal;
         this.phoneNumber = phoneNumber;
@@ -17,7 +17,7 @@ public class Guest {
     public String getMeal() {
         return meal;
     }
-    public int getPhoneNumber() {
+    public Double getPhoneNumber() {
         return phoneNumber;
     }
     public boolean isVegan() {

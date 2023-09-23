@@ -3,7 +3,7 @@ import java.util.*;
 public class Party {
     private List<Guest> guests = new ArrayList<>();
     private Set<String> meals = new HashSet<>();
-    private Map<Integer, Guest> phoneToGuest = new HashMap();
+    private Map<Double, Guest> phoneToGuest = new HashMap();
     Scanner scanner = new Scanner(System.in);
 
     public void addGuest() {
@@ -14,7 +14,7 @@ public class Party {
         String meal = scanner.nextLine();
 
         System.out.println("Podaj numer telefonu:");
-        int phoneNumber = Integer.valueOf(scanner.nextLine());
+        Double phoneNumber = scanner.nextDouble();
 
         System.out.println("Czy jesteś weganinem? (Y/N)");
         String isVeganString = scanner.nextLine();
@@ -41,7 +41,7 @@ public class Party {
     }
     public void displayGuestByPhoneNumber() {
         System.out.println("Podaj numer telefonu: ");
-        Integer phoneNumber = scanner.nextInt();
+        Double phoneNumber = scanner.nextDouble();
         Guest guest = phoneToGuest.get(phoneNumber);
         if(guest == null) {
             System.out.println("Nie znaleziono gościa o numerze telefonu:" + phoneNumber);
