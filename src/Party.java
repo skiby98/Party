@@ -41,10 +41,13 @@ public class Party {
     }
     public void displayGuestByPhoneNumber() {
         System.out.println("Podaj numer telefonu: ");
-        Integer phoneNumber = Integer.valueOf(scanner.nextLine());
+        Integer phoneNumber = scanner.nextInt();
         Guest guest = phoneToGuest.get(phoneNumber);
-
-        guest.displayGuestInformaction();
+        if(guest == null) {
+            System.out.println("Nie znaleziono gościa o numerze telefonu:" + phoneNumber);
+        } else {
+            guest.displayGuestInformaction();
+        }
     }
     public void displayGuests() {
         for (Guest guest : guests) {
